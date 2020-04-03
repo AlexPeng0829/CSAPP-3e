@@ -7,8 +7,8 @@ static void show_pointer(void *p, char *descr) {
     printf("%s\t%p\t%lu\n", descr, p, (unsigned long) p);
 }
 
-char big_array[1L<<24];    /*  16 MB */
-char huge_array[1L<<31];   /*   2 GB */
+// char big_array[1L<<24];    /*  16 MB */
+// char huge_array[1L<<31];   /*   2 GB */
 
 int global = 0;
 
@@ -23,8 +23,8 @@ int main ()
     p3 = malloc(1L << 32);
     p4 = malloc(1L << 8);
 
-    show_pointer((void *) big_array, "big array");
-    show_pointer((void *) huge_array, "huge array");
+    // show_pointer((void *) big_array, "big array");
+    // show_pointer((void *) huge_array, "huge array");
     show_pointer((void *) &local, "local");
     show_pointer((void *) &global, "global");
     show_pointer((void *) p1, "p1");
